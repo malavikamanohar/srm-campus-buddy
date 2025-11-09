@@ -234,6 +234,7 @@ const MapView = () => {
             selectedBuildingId={selectedBuildingId}
             onBuildingSelect={handleBuildingSelect}
             showUserLocation={showUserLocation}
+            showDirections={true}
             height="100%"
           />
 

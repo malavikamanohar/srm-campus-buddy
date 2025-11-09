@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Navigation } from "@/components/Navigation";
 import { buildings } from "@/data/buildings";
+import { BuildingPhotoGallery } from "@/components/BuildingPhotoGallery";
 
 const BuildingDetail = () => {
   const { id } = useParams();
@@ -46,6 +47,16 @@ const BuildingDetail = () => {
             Back to Buildings
           </Link>
         </Button>
+
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-2xl font-bold">Building Details</h1>
+          <Button asChild>
+            <Link to={`/map?building=${building.id}`} className="flex items-center gap-2">
+              <MapPin className="h-4 w-4" />
+              View on Map
+            </Link>
+          </Button>
+        </div>
         
         <div className="grid gap-6 lg:grid-cols-3">
           {/* Main Info */}
@@ -73,6 +84,15 @@ const BuildingDetail = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
+                {/* Photo Gallery */}
+                {building.photos && building.photos.length > 0 && (
+                  <BuildingPhotoGallery
+                    photos={building.photos}
+                    buildingName={building.name}
+                    panoramaUrl={building.panoramaUrl}
+                  />
+                )}
+                
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-lg border border-border bg-muted/50 p-4">
                     <div className="mb-1 flex items-center gap-2 text-sm text-muted-foreground">
