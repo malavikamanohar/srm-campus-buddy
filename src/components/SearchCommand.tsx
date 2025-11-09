@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, Building2, GraduationCap, User } from "lucide-react";
+import { Search, Building2, GraduationCap, User, MapPin } from "lucide-react";
 import {
   Command,
   CommandDialog,
@@ -9,6 +9,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
+  CommandSeparator,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { buildings } from "@/data/buildings";
@@ -63,12 +64,22 @@ export const SearchCommand = () => {
                 onSelect={() => handleSelect(`/buildings/${building.id}`)}
               >
                 <Building2 className="mr-2 h-4 w-4" />
-                <div className="flex flex-col">
+                <div className="flex flex-col flex-1">
                   <span>{building.name}</span>
                   <span className="text-xs text-muted-foreground">
                     {building.campus} • {building.category}
                   </span>
                 </div>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleSelect(`/map?building=${building.id}`);
+                  }}
+                  className="ml-2 p-1 hover:bg-accent rounded-sm"
+                  title="Show on map"
+                >
+                  <MapPin className="h-3 w-3 text-muted-foreground" />
+                </button>
               </CommandItem>
             ))}
           </CommandGroup>

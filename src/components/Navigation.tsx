@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Building2, GraduationCap, Home } from "lucide-react";
+import { Building2, GraduationCap, Home, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SearchCommand } from "@/components/SearchCommand";
 
@@ -46,6 +46,17 @@ export const Navigation = () => {
               <Link to="/buildings" className="flex items-center gap-2">
                 <Building2 className="h-4 w-4" />
                 <span className="hidden sm:inline">Buildings</span>
+              </Link>
+            </Button>
+            
+            <Button
+              variant={isActive("/map") ? "default" : "ghost"}
+              size="sm"
+              asChild
+            >
+              <Link to="/map" className="flex items-center gap-2">
+                <Map className="h-4 w-4" />
+                <span className="hidden sm:inline">Map</span>
               </Link>
             </Button>
             

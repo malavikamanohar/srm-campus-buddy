@@ -1,15 +1,19 @@
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { Search, Map, Grid3x3 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Navigation } from "@/components/Navigation";
 import { BuildingCard } from "@/components/BuildingCard";
 import { buildings } from "@/data/buildings";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
+import { CampusMap } from "@/components/CampusMap";
 
 const Buildings = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [campusFilter, setCampusFilter] = useState<string>("all");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
+  const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
+  const [selectedBuildingId, setSelectedBuildingId] = useState<string | undefined>();
 
   const categories = Array.from(new Set(buildings.map(b => b.category).filter(Boolean)));
   const campuses = Array.from(new Set(buildings.map(b => b.campus)));
@@ -29,10 +33,32 @@ const Buildings = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="mb-2 text-3xl font-bold text-foreground">Campus Buildings</h1>
-          <p className="text-muted-foreground">
-            Explore all {buildings.length} buildings across the SRMIST Kattankulathur campus
-          </p>
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h1 className="mb-2 text-3xl font-bold text-foreground">Campus Buildings</h1>
+              <p className="text-muted-foreground">
+                Explore all {buildings.length} buildings across the SRMIST Kattankulathur campus
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant={viewMode === "grid" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setViewMode("grid")}
+              >
+                <Grid3x3 className="h-4 w-4 mr-2" />
+                Grid
+              </Button>
+              <Button
+                variant={viewMode === "map" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setViewMode("map")}
+              >
+                <Map className="h-4 w-4 mr-2" />
+                Map
+              </Button>
+            </div>
+          </div>
         </div>
         
         {/* Filters */}
@@ -77,17 +103,29 @@ const Buildings = () => {
           Showing {filteredBuildings.length} of {buildings.length} buildings
         </div>
         
-        {/* Buildings Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filteredBuildings.map(building => (
-            <BuildingCard key={building.id} building={building} />
-          ))}
-        </div>
-        
-        {filteredBuildings.length === 0 && (
-          <div className="py-12 text-center">
-            <p className="text-muted-foreground">No buildings found matching your criteria.</p>
-          </div>
+        {/* Map or Grid View */}
+        {viewMode === "map" ? (
+          <CampusMap
+            buildings={filteredBuildings}
+            selectedBuildingId={selectedBuildingId}
+            onBuildingSelect={setSelectedBuildingId}
+            height="calc(100vh - 400px)"
+          />
+        ) : (
+          <>
+            {/* Buildings Grid */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filteredBuildings.map(building => (
+                <BuildingCard key={building.id} building={building} />
+              ))}
+            </div>
+            
+            {filteredBuildings.length === 0 && (
+              <div className="py-12 text-center">
+                <p className="text-muted-foreground">No buildings found matching your criteria.</p>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>
