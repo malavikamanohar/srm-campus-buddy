@@ -4,6 +4,7 @@ A modern, interactive web application for navigating the SRM Institute of Scienc
 Built with React, TypeScript, and Mapbox GL JS, this application provides a Google-Maps-like experience for exploring campus buildings, facilities, and faculty information.
 
 Features
+
 🗺️ Interactive Campus Map
 
 Google-Maps-style navigation with zoom, pan, and rotation controls
