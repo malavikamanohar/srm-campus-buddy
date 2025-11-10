@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+SRMIST Campus Guide
 
-## Project info
+A modern, interactive web application for navigating the SRM Institute of Science and Technology (SRMIST), Kattankulathur campus.
+Built with React, TypeScript, and Mapbox GL JS, this application provides a Google-Maps-like experience for exploring campus buildings, facilities, and faculty information.
 
-**URL**: https://lovable.dev/projects/aaf914f1-6e7f-4526-a22f-9446e769c5ff
+Features
+🗺️ Interactive Campus Map
 
-## How can I edit this code?
+Google-Maps-style navigation with zoom, pan, and rotation controls
 
-There are several ways of editing your application.
+Color-coded building markers categorized by function (Academic, Dining, Labs, etc.)
 
-**Use Lovable**
+Live location tracking with a real-time user position indicator
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/aaf914f1-6e7f-4526-a22f-9446e769c5ff) and start prompting.
+Turn-by-turn walking directions from your location to any building
 
-Changes made via Lovable will be committed automatically to this repo.
+Distance calculation showing walking time and distance
 
-**Use your preferred IDE**
+Building clustering for improved map performance
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🏢 Building Information
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Database of 46+ campus buildings
 
-Follow these steps:
+Each entry includes:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Building name, campus location, and category
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Floor count and total area
 
-# Step 3: Install the necessary dependencies.
-npm i
+GPS coordinates for precise mapping
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Building photographs and optional 360° views
 
-**Edit a file directly in GitHub**
+Search and filter buildings by name, campus, or category
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Toggle between Grid and Map views for flexible browsing
 
-**Use GitHub Codespaces**
+👨‍🏫 Faculty Directory
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Browse faculty members by department
 
-## What technologies are used for this project?
+View detailed profiles with contact details
 
-This project is built with:
+Department-wise organization for easy access
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🔍 Smart Search
 
-## How can I deploy this project?
+Global search with keyboard shortcuts (⌘K / Ctrl+K)
 
-Simply open [Lovable](https://lovable.dev/projects/aaf914f1-6e7f-4526-a22f-9446e769c5ff) and click on Share -> Publish.
+Quick navigation to buildings or faculty profiles
 
-## Can I connect a custom domain to my Lovable project?
+“Show on Map” option from search results
 
-Yes, you can!
+📱 Responsive Design
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Fully responsive for desktop, tablet, and mobile
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Touch-optimized map controls
+
+Adaptive layouts for various screen sizes
+
+
+
+| Component              | Technology              |
+| ---------------------- | ----------------------- |
+| **Frontend Framework** | React 18.3.1            |
+| **Language**           | TypeScript 5.8.3        |
+| **Build Tool**         | Vite 5.4.19             |
+| **Styling**            | Tailwind CSS 3.4.17     |
+| **UI Components**      | shadcn/ui + Radix UI    |
+| **Routing**            | React Router DOM 6.30.1 |
+| **Maps**               | Mapbox GL JS 3.16.0     |
+| **Icons**              | Lucide React            |
+| **State Management**   | TanStack React Query    |
+
+
+Summary
+
+The SRMIST Campus Guide is a modern web application that helps students, staff, and visitors easily explore the SRM Kattankulathur campus.
+It combines interactive maps, search features, and faculty information in a responsive, user-friendly interface.
