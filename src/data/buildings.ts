@@ -23,8 +23,7 @@ export const buildings: Building[] = [
     area: 8374, 
     category: "Dining", 
     latitude: 12.8235, 
-    longitude: 80.0445,
-    photos: ["/src/assets/buildings/canteen.jpg"]
+    longitude: 80.0445
   },
   { id: "pg", name: "PG Block", campus: "Main Campus", floors: "G+3", area: 7487, category: "Academic", latitude: 12.8228, longitude: 80.0438 },
   { id: "aarush", name: "Aarush Block", campus: "Main Campus", floors: "G+2", area: 780, category: "Academic", latitude: 12.8232, longitude: 80.0442 },
@@ -69,7 +68,7 @@ export const buildings: Building[] = [
     category: "Management", 
     latitude: 12.8260, 
     longitude: 80.0480,
-    photos: ["/src/assets/buildings/mba.jpg"]
+    photos: ["/src/assets/buildings/mba.png"]
   },
   { id: "barch", name: "B.Arch Block", campus: "Annexure I", floors: "G+5", area: 23788, category: "Architecture", latitude: 12.8258, longitude: 80.0485 },
   { id: "barcha", name: "B.Arch - A", campus: "Annexure I", floors: "G+5", area: 20726, category: "Architecture", latitude: 12.8253, longitude: 80.0490 },
