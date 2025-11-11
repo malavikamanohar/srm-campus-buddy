@@ -9,6 +9,7 @@ interface FacultyCardProps {
   faculty: FacultyMember;
 }
 
+
 export const FacultyCard = ({ faculty }: FacultyCardProps) => {
   const getDesignationColor = (designation: string) => {
     if (designation.includes("Head") || designation.includes("Chairperson")) {
