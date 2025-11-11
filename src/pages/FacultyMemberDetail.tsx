@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Navigation } from "@/components/Navigation";
 import { Separator } from "@/components/ui/separator";
 import { getFacultyById } from "@/data/facultyMembers";
+
 import { departments } from "@/data/faculties";
 
 const FacultyMemberDetail = () => {
