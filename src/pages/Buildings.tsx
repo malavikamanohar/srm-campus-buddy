@@ -6,6 +6,7 @@ import { BuildingCard } from "@/components/BuildingCard";
 import { buildings } from "@/data/buildings";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+
 import { CampusMap } from "@/components/CampusMap";
 
 const Buildings = () => {
