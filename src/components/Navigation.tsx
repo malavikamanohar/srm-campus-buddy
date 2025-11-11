@@ -6,6 +6,7 @@ import { SearchCommand } from "@/components/SearchCommand";
 export const Navigation = () => {
   const location = useLocation();
   
+  
   const isActive = (path: string) => location.pathname === path;
   
   return (
