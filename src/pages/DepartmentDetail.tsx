@@ -12,6 +12,7 @@ import { FacultyCard } from "@/components/FacultyCard";
 const DepartmentDetail = () => {
   const { id } = useParams();
   const department = departments.find(d => d.id === id);
+  
   const facultyMembers = department ? getFacultyByDepartment(department.id) : [];
 
   if (!department) {
