@@ -7,6 +7,7 @@ import { getWalkingDirections, RouteData } from "@/utils/directions";
 import { DirectionsPanel } from "./DirectionsPanel";
 
 // Mapbox public token
+
 mapboxgl.accessToken = "pk.eyJ1IjoibG92YWJsZS1kZXYiLCJhIjoiY2x3ODZ5OXhuMGtiMjJqcGtuMWIyeGU1ZiJ9.aZ5EBL80rcIWgSi0LoJ6-w";
 
 interface CampusMapProps {
