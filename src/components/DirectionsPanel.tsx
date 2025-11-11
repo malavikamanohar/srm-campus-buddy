@@ -12,6 +12,7 @@ interface DirectionsPanelProps {
   onClose: () => void;
 }
 
+
 export const DirectionsPanel = ({
   steps,
   totalDistance,
