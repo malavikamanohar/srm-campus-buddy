@@ -9,6 +9,7 @@ interface BuildingPhotoGalleryProps {
   panoramaUrl?: string;
 }
 
+
 export const BuildingPhotoGallery = ({
   photos,
   buildingName,
