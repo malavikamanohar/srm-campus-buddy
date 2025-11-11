@@ -10,6 +10,7 @@ import { BuildingPhotoGallery } from "@/components/BuildingPhotoGallery";
 const BuildingDetail = () => {
   const { id } = useParams();
   const building = buildings.find(b => b.id === id);
+  
 
   if (!building) {
     return (
