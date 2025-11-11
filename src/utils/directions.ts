@@ -7,6 +7,7 @@ export interface DirectionStep {
   maneuver?: string;
 }
 
+
 export interface RouteData {
   coordinates: [number, number][];
   distance: number;
