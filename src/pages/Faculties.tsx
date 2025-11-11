@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 
 const Faculties = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  
 
   const filteredDepartments = departments.filter(dept =>
     dept.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
