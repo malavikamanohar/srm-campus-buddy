@@ -11,6 +11,7 @@ export interface Coordinates {
  */
 export function calculateDistance(point1: Coordinates, point2: Coordinates): number {
   const R = 6371e3; // Earth's radius in meters
+  
   const φ1 = (point1.latitude * Math.PI) / 180;
   const φ2 = (point2.latitude * Math.PI) / 180;
   const Δφ = ((point2.latitude - point1.latitude) * Math.PI) / 180;
