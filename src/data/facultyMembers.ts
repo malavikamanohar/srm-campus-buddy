@@ -12,6 +12,7 @@ export interface FacultyMember {
 }
 
 export const facultyMembers: FacultyMember[] = [
+  
   // Computer Science and Computing Technologies
   {
     id: "dr-g-niranjana",
