@@ -3,6 +3,7 @@ export interface Building {
   name: string;
   campus: "Main Campus" | "Annexure I" | "Annexure II" | "Common Area";
   floors: string;
+  
   area: number;
   category?: string;
   facilities?: string[];
