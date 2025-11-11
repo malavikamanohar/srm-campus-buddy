@@ -8,6 +8,7 @@ import { campusStats } from "@/data/buildings";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      
       <Navigation />
       
       {/* Hero Section */}
