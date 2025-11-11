@@ -11,6 +11,7 @@ import { Search, MapPin, Navigation as NavigationIcon, X } from "lucide-react";
 import { getCategoryColor, calculateDistance, formatDistance, calculateWalkingTime, getCurrentLocation, Coordinates } from "@/utils/geoUtils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+
 const MapView = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
