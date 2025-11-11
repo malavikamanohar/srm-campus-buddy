@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, Building2, GraduationCap, User, MapPin } from "lucide-react";
 import {
+  
   Command,
   CommandDialog,
   CommandEmpty,
