@@ -7,6 +7,7 @@ export interface Faculty {
   phone?: string;
 }
 
+
 export interface Department {
   id: string;
   name: string;
