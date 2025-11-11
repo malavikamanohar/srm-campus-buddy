@@ -7,6 +7,7 @@ import { Building } from "@/data/buildings";
 
 interface BuildingCardProps {
   building: Building;
+  
 }
 
 export const BuildingCard = ({ building }: BuildingCardProps) => {
